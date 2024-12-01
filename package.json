@@ -5,6 +5,7 @@
    "scripts": {
       "dev": "next dev --turbopack",
       "build": " npm install",
+      "install": "npm install --legacy-peer-deps",
       "start": "next start",
       "lint": "next lint",
       "typegen": "npx sanity@latest schema extract && npx sanity@latest typegen generate"
