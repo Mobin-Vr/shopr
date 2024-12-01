@@ -6,7 +6,7 @@ function UserMenu({ user, createClerkPasskey }) {
    return (
       <ClerkLoaded>
          <SignedIn>
-            <NavButton>
+            <NavButton route='/orders'>
                <PackageIcon className='h-6 w-6' />
                <span>My Orders</span>
             </NavButton>

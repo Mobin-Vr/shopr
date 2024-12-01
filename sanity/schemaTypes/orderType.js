@@ -3,7 +3,7 @@ import { defineArrayMember, defineField, defineType } from 'sanity';
 
 export const orderType = defineType({
    name: 'order',
-   title: 'Order',
+   title: 'Orders',
    type: 'document',
    icon: BasketIcon,
    fields: [

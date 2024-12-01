@@ -6,6 +6,7 @@ import Logo from './Logo';
 import NavButton from './NavButton';
 import SearchForm from './SearchForm';
 import UserMenu from './UserMenu';
+import CartItemCard from './CartItemCard';
 
 function Header() {
    const { user } = useUser();
@@ -13,7 +14,6 @@ function Header() {
    async function createClerkPasskey() {
       try {
          const response = await user?.createPasskey();
-         console.log(response);
       } catch (err) {
          console.error('Error:', JSON.stringify(err, null, 2));
       }
@@ -25,9 +25,9 @@ function Header() {
             <Logo />
             <SearchForm />
             <div className='flex items-center space-x-4 mt-4 sm:mt-0 flex-1 sm:flex-none'>
-               <NavButton>
+               <NavButton route='/cart'>
                   <TrolleyIcon className='h-6 w-6' />
-                  <span>My Basket</span>
+                  <span>My Cart</span>
                </NavButton>
                <UserMenu user={user} createClerkPasskey={createClerkPasskey} />
             </div>
